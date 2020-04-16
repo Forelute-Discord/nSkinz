@@ -47,7 +47,7 @@ namespace ImGui
 void draw_gui()
 {
 	ImGui::SetNextWindowSize(ImVec2(700, 400));
-	if(ImGui::Begin("nSkinz", nullptr,
+	if(ImGui::Begin("SkinChanger", nullptr,
 		ImGuiWindowFlags_NoResize |
 		ImGuiWindowFlags_NoCollapse |
 		ImGuiWindowFlags_AlwaysAutoResize |
@@ -252,9 +252,9 @@ void draw_gui()
 		ImGui::PopItemWidth();
 		ImGui::Columns(1);
 
-		ImGui::Text("nSkinz by namazso");
-		ImGui::SameLine(ImGui::GetWindowWidth() - ImGui::CalcTextSize("https://skinchanger.download").x - 20);
-		ImGui::Text("https://skinchanger.download");
+		ImGui::Text("Original Code by Namaszo - Updated Code by Lenny5125, Dreas");
+		ImGui::SameLine(ImGui::GetWindowWidth() - ImGui::CalcTextSize("https://skinchanger.prec1sion.cf/").x - 20);
+		ImGui::Text("https://skinchanger.prec1sion.cf/");
 
 		ImGui::End();
 	}

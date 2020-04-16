@@ -79,10 +79,12 @@ template<sync_type Type, typename Container, typename T1, typename T2, typename 
 static auto do_sync(const Container& container, T1& key, T2& value, TC Container::value_type::* member) -> void
 {
 	auto syncer = value_syncer<Container, T1, T2, TC>{ container, key, value, member };
-	if constexpr(Type == sync_type::VALUE_TO_KEY)
+	if (constexpr(Type == sync_type::VALUE_TO_KEY)) {
 		syncer.value_to_key();
-	else
+	}
+	else {
 		syncer.key_to_value();
+	}
 }
 
 struct sticker_setting

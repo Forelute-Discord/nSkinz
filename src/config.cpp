@@ -102,7 +102,7 @@ auto from_json(const json& j, item_setting& o) -> void
 
 auto config::save() -> void
 {
-	auto of = std::ofstream("nSkinz.json");
+	auto of = std::ofstream("skins.json");
 	if(of.good())
 		of << json(m_items);
 }
@@ -111,7 +111,7 @@ auto config::load() -> void
 {
 	try
 	{
-		auto ifile = std::ifstream("nSkinz.json");
+		auto ifile = std::ifstream("skins.json");
 		if(ifile.good())
 		{
 			m_items = json::parse(ifile).get<std::vector<item_setting>>();
